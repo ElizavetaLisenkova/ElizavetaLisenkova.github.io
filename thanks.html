@@ -14,10 +14,12 @@
 
 <body>
     <div class="h-wrapper">
+        <h1 class="display-4">Ваш номер заказа:  </h1>
         <h1 class="display-4" id="orderId"></h1>
     </div >
+    
     <script>
-        document.getElementById("orderId").innerHTML = `Ваш номер заказа: ${Math.round(Math.random(1000000)*10000000)}`;
+        document.getElementById("orderId").innerHTML = `${Math.round(Math.random(1000000)*10000000)}`;
     </script> 
     <script src="scripts/navbar.js"></script>
     <script src="scripts/trackingCode/thanks.js"></script>
