@@ -1,5 +1,6 @@
 const orderId= document.getElementById("orderId").innerText;
 const cart = JSON.parse(sessionStorage.getItem('cart'));
+
 function getProducts() {
     products = []
     for (let i=0; i < cart.length; i++) {
@@ -12,8 +13,6 @@ function getProducts() {
     }
     return products;
 };
-
-
 
 
 window.gdeslon_q = window.gdeslon_q || [];

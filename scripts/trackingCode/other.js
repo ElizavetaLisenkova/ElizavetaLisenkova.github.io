@@ -5,7 +5,7 @@ window.gdeslon_q.push({
     merchant_id: "107016", //id оффера в нашей системе
     order_id: "", //id заказа
     category_id: "", //id текущей категории
-    products: "",
+    products: [],
     deduplication: "gdeslon", //параметр дедупликации заказов (динамическое значение)
     user_id: "" //идентификатор пользователя
 });
