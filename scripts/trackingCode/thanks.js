@@ -1,4 +1,4 @@
-const orderId= document.getElementById("orderId");
+const orderId= document.getElementById("orderId").innerText;
 const cart = JSON.parse(sessionStorage.getItem('cart'));
 function getProducts() {
     products = []
