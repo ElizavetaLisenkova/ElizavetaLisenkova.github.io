@@ -78,19 +78,19 @@ if (!window.gdeslon_q || window.gdeslon_q instanceof Array) {
                 return deserializeObject(document.cookie, ";")[key]
             },
             token = function() {
-                return cookies("gdeslon.ru.__arc_token")
+                return cookies("gdeslon.kokoc.com.__arc_token")
             },
             affiliate_id = function() {
-                return cookies("gdeslon.ru.__arc_aid")
+                return cookies("gdeslon.kokoc.com.__arc_aid")
             },
             track_domain = function() {
-                return cookies("gdeslon.ru.__arc_domain") || "gdeslon.ru"
+                return cookies("gdeslon.kokoc.com.__arc_domain") || "gdeslon.kokoc.com"
             },
             pixel_domain = function() {
-                return cookies("gdeslon.ru.__arc_gsp_domain") || "gdeslon.ru"
+                return cookies("gdeslon.kokoc.com.__arc_gsp_domain") || "gdeslon.kokoc.com"
             },
             gs_uid = function() {
-                return cookies("gdeslon.ru.user_id")
+                return cookies("gdeslon.kokoc.com.user_id")
             },
             processor = function() {
                 _state.pushStartedAt = Date.now();
@@ -175,23 +175,23 @@ if (!window.gdeslon_q || window.gdeslon_q instanceof Array) {
                     return processor.apply(null, arguments)
                 } catch (c) {
                     _exceptions.push(c);
-                    var url = "https://gdeslon.ru/error.js?" + serializeObject({
+                    var url = "https://gdeslon.kokoc.com/error.js?" + serializeObject({
                         message: c.message
                     });
                     appendScript(url)
                 }
             };
         if (queryParams.gsaid) {
-            writeCookie("gdeslon.ru.__arc_aid", queryParams.gsaid)
+            writeCookie("gdeslon.kokoc.com.__arc_aid", queryParams.gsaid)
         }
         if (queryParams._gs_ref) {
-            writeCookie("gdeslon.ru.__arc_token", queryParams._gs_ref)
+            writeCookie("gdeslon.kokoc.com.__arc_token", queryParams._gs_ref)
         }
         if (queryParams._gs_vm) {
-            writeCookie("gdeslon.ru.__arc_domain", queryParams._gs_vm)
+            writeCookie("gdeslon.kokoc.com.__arc_domain", queryParams._gs_vm)
         }
         if (queryParams._gs_ld) {
-            writeCookie("gdeslon.ru.__arc_gsp_domain", queryParams._gs_ld)
+            writeCookie("gdeslon.kokoc.com.__arc_gsp_domain", queryParams._gs_ld)
         }
         return {
             push: _push,
