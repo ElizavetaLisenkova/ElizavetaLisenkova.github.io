@@ -1,0 +1,15 @@
+.button-wrapper{
+    display: flex;	
+    justify-content: center;	
+    margin: 100px 0;
+  }
+
+.form-wrapper{
+    margin: 0 300px 300px 300px;
+}
+
+.h-wrapper{
+    display: flex;	
+    justify-content: center;	
+    margin: 50px 0;
+}
