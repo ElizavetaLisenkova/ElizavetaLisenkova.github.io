@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оформление заказа</title>
     <script src="scripts/trackingCode/onePart.js" type="text/javascript"></script>
@@ -37,6 +38,7 @@
           <label for="inputAddress2">Адрес доставки</label>
           <input type="text" class="form-control" id="inputAddress2" placeholder="Москва, Цветной бульвар, 30с1">
         </div>
+        <script src="scripts/removeBasket.js"></script>
         <div style="text-align: center;">
           <a href="thanks.html" class="btn btn-primary" role="button" onclick="removeBasket()" >Оформить заказ</a>
         </div>
