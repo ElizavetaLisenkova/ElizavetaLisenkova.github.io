@@ -19,7 +19,7 @@ function deleteCookie( name, path, domain ) {
     }
   }
 
-function checkCurrentDeduplication(cookieName) {
+function setDeduplicationValue(cookieName) {
     if (document.cookie.indexOf(cookieName) == 0) {
         localStorage.setItem("deduplication", "gdeslon");
         
@@ -29,15 +29,18 @@ function checkCurrentDeduplication(cookieName) {
 }
 
 
-cookieName = "gdeslon.kokoc.com.__arc_aid";
-source = getParam('utm_source');
-console.log(source)
+cookieName = "gdeslon.kokoc.com.__arc_aid"; //кука, на которую ориентируемся
+source = getParam('utm_source'); // метка, на которую смотрим
+/* TODO:
+если нет utm_source, но есть другая чужая рекламная метка, например yclid и др, проверять по нескольким ключам гет параметров  
+*/
+
+domain = '.swtest.ru'; // домен рекламодателя, на который ставится кука
 
 if (source != 'gdeslon'){
     if (source) {
-        deleteCookie(cookieName, '/', '.swtest.ru');
-    }
-    
+        deleteCookie(cookieName, '/', domain);
+    } 
 }
 
-checkCurrentDeduplication(cookieName);
+setDeduplicationValue(cookieName);

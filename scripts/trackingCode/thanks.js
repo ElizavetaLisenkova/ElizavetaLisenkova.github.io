@@ -22,6 +22,6 @@ window.gdeslon_q.push({
     order_id: `${orderId}`, //id заказа
     category_id: "", //id текущей категории
     products: getProducts(),
-    deduplication: "gdeslon", //параметр дедупликации заказов (динамическое значение)
+    deduplication: localStorage.getItem("deduplication"), //параметр дедупликации заказов (динамическое значение)
     user_id: "" //идентификатор пользователя
 });
