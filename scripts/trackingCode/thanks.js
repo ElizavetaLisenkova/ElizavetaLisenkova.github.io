@@ -25,3 +25,6 @@ window.gdeslon_q.push({
     deduplication: localStorage.getItem("deduplication"), //параметр дедупликации заказов (динамическое значение)
     user_id: "" //идентификатор пользователя
 });
+
+sessionStorage.clear();
+location.reload();
