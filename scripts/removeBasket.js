@@ -1,4 +1,3 @@
-function removeBasket() {
-    sessionStorage.clear();
-    location.reload();
-}
+
+sessionStorage.clear();
+location.reload();
