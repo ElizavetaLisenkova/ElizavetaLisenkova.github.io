@@ -20,7 +20,7 @@ function deleteCookie( name, path, domain ) { //функция, которая �
   }
 
 function setDeduplicationValue(cookieName) { //есть кука - возвращает "gdeslon", нет куки - возвращает "other"
-    if (document.cookie.indexOf(cookieName) == 0) {
+    if (getCookie(cookieName)) {
         localStorage.setItem("deduplication", "gdeslon");
         
     }else{
