@@ -21,22 +21,23 @@ function deleteCookie( name, path, domain ) { //функция, которая �
 
 function setDeduplicationValue(cookieName) { //есть кука - возвращает "gdeslon", нет куки - возвращает "other"
     if (getCookie(cookieName)) {
-        localStorage.setItem("deduplication", "gdeslon");
+        localStorage.setItem(localStorageDeduplicationKey, "gdeslon");
         
     }else{
-        localStorage.setItem("deduplication", "other");
+        localStorage.setItem(localStorageDeduplicationKey, "other");
     }
 }
 
-
-cookieName = "gdeslon.kokoc.com.__arc_aid"; //кука, на которую ориентируемся
-param = 'utm_source'; // метка, на которую смотрим
+const merchant_id = '107016'
+const localStorageDeduplicationKey = `deduplication_${merchant_id}`;
+const cookieName = "gdeslon.kokoc.com.__arc_aid"; //кука, на которую ориентируемся
+const param = 'utm_source'; // метка, на которую смотрим
 /* TODO:
 если нет utm_source, но есть другая чужая рекламная метка, например yclid и др, проверять по нескольким ключам гет параметров  
 */
-domain = '.swtest.ru'; // домен рекламодателя, на который ставится кука
-gdeslonUtmValue = 'gdeslon'; //согласованное значение utm_source для Гдеслона
-source = getParam(param); //получаем значение метки utm_source
+const domain = '.kokoc.com'; // домен рекламодателя, на который ставится кука
+const gdeslonUtmValue = 'gdeslon'; //согласованное значение utm_source для Гдеслона
+let source = getParam(param); //получаем значение метки utm_source
 
 if (source != gdeslonUtmValue){ //если значение utm_source не gdeslon
     if (source) { //и если значение не false (то есть нет метки вообще)
