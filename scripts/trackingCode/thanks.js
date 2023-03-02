@@ -27,4 +27,3 @@ window.gdeslon_q.push({
 });
 
 sessionStorage.clear();
-location.reload();
