@@ -5,6 +5,10 @@ let total_order = 0;
 const table = document.getElementById('table');
 const forDeleteBtn = document.getElementById('forDeleteBtn');
 
+function removeBasket() {
+    sessionStorage.clear();
+    location.reload();
+}
 if (cart != null) {
     for (let i=0; i < cart.length; i++) {
         total = parseInt(cart[i].price) * parseInt(cart[i].count);
